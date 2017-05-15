@@ -93,15 +93,21 @@ img {
 
 /*** Media queries for adjusting to different screen sizes ***/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   .starwars-demo {
-    font-size: 0px;
+    top:90%;
+    left: 50%;
+    position: absolute;
+    font-size: 8px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .starwars-demo {
-    font-size: 0px;
+    top:90%;
+    left: 50%;
+    position: absolute;
+    font-size: 5px;
   }
 }
 * {

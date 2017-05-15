@@ -102,12 +102,12 @@ window.onload = function () {
       }
     }
   }
-  
+
   // Play
   play = function () {
     categories = [
         ["chewbacca", "han-solo", "luke-skywalker", "darth-vader", "leia-organa", "obi-wan-kenobi", "mace-windu", "stormtroopers"],
-        ["endor", "coruscant", "kamino", "Mustafar"]
+        ["endor", "coruscant", "kamino", "mustafar"]
     ];
 
 
