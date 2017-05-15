@@ -1,24 +1,17 @@
 /* Animation properties */
 .star {
-  animation: star 10s ease-out infinite;
+  animation: star 10s ease-out;
 }
 .wars {
-  animation: wars 10s ease-out infinite;
+  animation: wars 10s ease-out;
 }
-.byline span {
-  animation: spin-letters 10s linear infinite;
-}
-.byline {
-  animation: move-byline 10s linear infinite;
-}
-
 /* Keyframes */
 @keyframes star {
   0% {
     opacity: 0;
     transform: scale(1.5) translateY(-0.75em);
   }
-  20% {
+  30% {
     opacity: 1;
   }
   89% {
@@ -36,7 +29,7 @@
     opacity: 0;
     transform: scale(1.5) translateY(0.5em);
   }
-  20% {
+  30% {
     opacity: 1;
   }
   90% {
@@ -49,23 +42,6 @@
   }
 }
 
-@keyframes spin-letters {
-  0%, 10% {
-    opacity: 0;
-    transform: rotateY(90deg);
-  }
-  30% {
-    opacity: 1;
-  }
-  70%, 86% {
-    transform: rotateY(0);
-    opacity: 1;
-  }
-  95%, 100% {
-    opacity: 0;
-  }
-}
-
 @keyframes move-byline {
   0% {
     transform: translateZ(5em);
@@ -74,16 +50,18 @@
     transform: translateZ(0);
   }
 }
+#right{
+  float: left;
+  position: absolute;
+  margin-top: 5%;
+  text-align: center;
+  border: 1px dotted yellow;
+}
 
 /* Make the 3D work on the container */
 .starwars-demo {
   perspective: 800px;
   transform-style: preserve3d;
-}
-
-/* General styles and layout */
-body {
-  background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
 }
 
 .starwars-demo {
@@ -95,15 +73,12 @@ body {
   width: 34em;
 }
 
-.byline span {
-  display: inline-block;
-}
 
 img {
   width: 100%;
 }
 
-.star, .wars, .byline {
+.star, .wars, {
   position: absolute;
 }
 
@@ -115,17 +90,6 @@ img {
   bottom: -0.5em;
 }
 
-.byline {
-  color: yellow;
-  font-family: "ITC Serif Gothic", Lato;
-  font-size: 2.25em;
-  left: -2em;
-  letter-spacing: 0.4em;
-  right: -2em;
-  text-align: center;
-  text-transform: uppercase;
-  top: 29%;
-}
 
 /*** Media queries for adjusting to different screen sizes ***/
 
@@ -141,6 +105,7 @@ img {
   }
 }
 * {
+    font-family: 'Abel', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -184,3 +149,104 @@ header a, a:visited {
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index:0;
 }
+
+p{
+  color: white;
+}
+
+#title{
+  color: yellow;
+  font-weight: bold;
+}
+#alphabet {
+  @include clear;
+  margin:15px auto;
+  padding:0;
+  max-width:900px;
+}
+
+#alphabet li {
+  float:left;
+  margin: 0 10px 10px 0;
+  list-style:none;
+  width:35px;
+  height:30px;
+  padding:10px;
+  background:yellow;
+  color:black;
+  cursor:pointer;
+  border: solid 1px black;
+  font-weight: bold;
+  font-size: 14px;
+    
+    &:hover{
+      background:white;
+      border: solid 1px black;
+      color:yellow;
+    }
+}
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display:block;
+}
+
+#my-word li {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size:1.6em;
+}
+.active {
+  cursor:default;
+    opacity: 0.3;
+  
+}
+
+#mylives{
+  font-size:1.6em;
+  text-align:center;
+  display:block;
+}
+
+#reset{
+  float:left;
+  margin: 0 10px 10px 0;
+  list-style:none;
+  width:100px;
+  height:50px;
+  padding:10px;
+  background:yellow;
+  color:black;
+  cursor:pointer;
+  border: solid 1px black;
+    
+    &:hover{
+      background:white;
+      border: solid 1px black;
+      color:yellow;
+    }
+}
+#hold{
+  clear: left;
+  font-size: 30px;
+  font-weight: bold;
+}
+#catagoryName{
+  clear: left;
+}
+
+@media (max-width: 767px) {
+  #alphabet {
+  padding:0 0 0 15px;
+}
+  }
+
+  @media (max-width: 480px) {
+  #alphabet {
+  padding:0 0 0 25px;
+}
+  }
