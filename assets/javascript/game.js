@@ -44,7 +44,9 @@ window.onload = function () {
       catagoryName.innerHTML = "The Chosen Category Is Star Wars Locations";
     }
   }
-
+  function show(){
+        document.getElementById('imageHolder1').innerHTML="<a href='#'><img src='assets/images/final.gif' border=0/></a>";
+    }
   // Create guesses ul
    result = function () {
     wordHolder = document.getElementById('hold');
@@ -66,8 +68,6 @@ window.onload = function () {
       correct.appendChild(guess);
     }
   }
-  
-  // Show lives
    comments = function () {
     showLives.innerHTML = "You have " + lives + " lives";
     if (lives < 1) {
@@ -76,12 +76,13 @@ window.onload = function () {
     for (var i = 0; i < geusses.length; i++) {
       if (counter + space === geusses.length) {
         showLives.innerHTML = "You Win!";
+        show();
       }
     }
   }
 
 
-  // OnClick Function
+
    check = function () {
     list.onclick = function () {
       var geuss = (this.innerHTML);
@@ -103,7 +104,7 @@ window.onload = function () {
     }
   }
 
-  // Play
+
   play = function () {
     categories = [
         ["chewbacca", "han-solo", "luke-skywalker", "darth-vader", "leia-organa", "obi-wan-kenobi", "mace-windu", "stormtroopers"],

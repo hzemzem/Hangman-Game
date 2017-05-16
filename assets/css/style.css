@@ -57,7 +57,18 @@
   text-align: center;
   border: 1px dotted yellow;
 }
-
+#left{
+  float: left;
+  position: relative;
+  margin-top: 30%;
+  text-align: center;
+  border: 1px dotted yellow;
+}
+#imageHolder1{
+  text-align: center;
+  height: 240px;
+  width: 250px;
+}
 /* Make the 3D work on the container */
 .starwars-demo {
   perspective: 800px;
