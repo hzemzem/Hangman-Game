@@ -11,11 +11,13 @@ window.onload = function () {
   var geusses = [ ];     
   var lives ;            
   var counter ;           
-  var space;             
+  var space;  
+  var w = 0;           
 
   // Get elements
   var showLives = document.getElementById("mylives");
   var showCatagory = document.getElementById("scatagory");
+  var showWins = document.getElementById("winsSoFar");
 
 
 
@@ -78,6 +80,11 @@ window.onload = function () {
         showLives.innerHTML = "You Win!";
         show();
       }
+    }
+    if (showLives.innerHTML === "You Win!") {
+      w = parseInt(w) + 1;
+        console.log(w);
+        showWins.innerHTML = "Number of wins: " + w;
     }
   }
 
